@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Créer un compte - Travelia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container row">
+      <a class="brand" href="index.html">Travelia</a>
+      <nav class="nav">
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#experiences">Expériences</a>
+        <a href="index.html#a-propos">À propos</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#offres">Offres</a>
+        <a href="index.html#guides">Guides</a>
+        <a href="login.html">Connexion</a>
+      </nav>
+      <a class="btn btn-primary" href="index.html#destinations">Commencer</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container auth-wrap">
+      <article class="auth-card">
+        <h1>Créer un compte</h1>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Compte créé (simulation).');">
+          <div class="row">
+            <input type="text" placeholder="Prénom" required>
+            <input type="text" placeholder="Nom" required>
+          </div>
+          <input type="email" placeholder="Adresse e-mail" required>
+          <input type="password" placeholder="Mot de passe" required>
+          <input type="password" placeholder="Confirmer le mot de passe" required>
+          <button class="btn btn-cta" type="submit">Créer le compte</button>
+        </form>
+        <p style="color:var(--muted);margin-top:10px">Déjà inscrit ? <a href="login.html" style="color:var(--accent)">Se connecter</a></p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container row foot">
+      <p>© <span id="year"></span> Travelia. Tous droits réservés.</p>
+      <a href="#top" class="to-top">Haut de page ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

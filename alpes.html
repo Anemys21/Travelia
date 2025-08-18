@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpes - Travelia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container row">
+      <a class="brand" href="index.html">Travelia</a>
+      <nav class="nav">
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#experiences">Expériences</a>
+        <a href="index.html#a-propos">À propos</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="login.html">Connexion</a>
+      </nav>
+      <a class="btn btn-primary" href="index.html#destinations">Retour</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Alpes</h1>
+      <p class="lead">Massif mythique, lacs d’altitude et villages de charme pour des aventures quatre saisons.</p>
+      <div class="grid" style="margin:18px 0">
+        <ul class="bullets">
+          <li>Saison idéale: été (randonnée), hiver (ski)</li>
+          <li>Activités: rando, via ferrata, ski, spa, fromageries</li>
+          <li>Durée conseillée: 3 à 6 jours</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop" alt="Crêtes enneigées">
+        <img src="https://images.unsplash.com/photo-1500048993953-d23a436266cf?q=80&w=1200&auto=format&fit=crop" alt="Lac alpin">
+        <img src="https://images.unsplash.com/photo-1499346030926-9a72daac6c63?q=80&w=1200&auto=format&fit=crop" alt="Village de montagne">
+        <img src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?q=80&w=1200&auto=format&fit=crop" alt="Chemin de randonnée">
+      </div>
+      <div id="map" aria-label="Carte Alpes"></div>
+      <p style="margin-top:16px"><a class="btn btn-cta" href="#" data-quote="Alpes">Demander un devis</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal">
+      <p>© 2025 AMOUBE NDE LOUANGE-MYSTERE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const map = L.map('map').setView([45.9237, 6.8694], 10); // Chamonix
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map);
+    L.marker([45.9237, 6.8694]).addTo(map).bindPopup('Alpes - Chamonix');
+  </script>
+  <script src="app.js"></script>
+  <!-- Modal Devis -->
+  <div class="modal-backdrop" id="quoteModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <header>
+        <h3>Demander un devis</h3>
+        <button class="close" data-close>&times;</button>
+      </header>
+      <div class="grid">
+        <div>
+          <label>Destination</label>
+          <input type="text" id="q-destination" value="Alpes" />
+        </div>
+        <div>
+          <label>Type</label>
+          <select id="q-type">
+            <option value="volhotel">Vol + Hôtel</option>
+            <option value="hotel">Hôtel seul</option>
+          </select>
+        </div>
+        <div>
+          <label>Personnes</label>
+          <input type="number" id="q-personnes" min="1" value="2" />
+        </div>
+        <div>
+          <label>Nuities</label>
+          <input type="number" id="q-nuits" min="1" value="5" />
+        </div>
+        <div>
+          <label>Saison</label>
+          <select id="q-saison">
+            <option value="basse">Basse</option>
+            <option value="normale" selected>Normale</option>
+            <option value="haute">Haute</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <span id="q-resultat" class="badge" aria-live="polite"></span>
+        <button class="btn btn-cta" id="q-calculer">Calculer</button>
+        <button class="btn" data-close>Fermer</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

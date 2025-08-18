@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checklist valise - Travelia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container row">
+      <a class="brand" href="index.html#top">Travelia</a>
+      <nav class="nav">
+        <a href="destinations.html">Toutes les destinations</a>
+        <a href="guides.html">Guides</a>
+        <a href="login.html">Connexion</a>
+      </nav>
+      <a class="btn btn-primary" href="#" data-quote="">Demander un devis</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <article class="prose">
+        <h1>Checklist valise: l'indispensable</h1>
+        <p class="lead">Tout ce qu'il faut pour voyager léger sans rien oublier.</p>
+        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?q=80&w=1600&auto=format&fit=crop" alt="Valise et bagages" style="width:100%;border-radius:12px;margin:16px 0;"/>
+        <h2>Les essentiels</h2>
+        <ul>
+          <li>Documents: passeport, billets, assurances, permis</li>
+          <li>Moyens de paiement: carte, espèces locales, backup</li>
+          <li>Hygiène: brosse à dents, savon solide, crème solaire</li>
+          <li>Vêtements: 5 hauts, 2 bas, 1 veste, 1 tenue de nuit</li>
+          <li>Électronique: téléphone, chargeur, adaptateur</li>
+        </ul>
+        <h2>Optimiser l'espace</h2>
+        <p>Roulez les vêtements, utilisez des <em>packing cubes</em>, mettez les chaussettes dans les chaussures.</p>
+        <h2>Astuces</h2>
+        <p>Photographiez vos documents, pesez la valise, gardez une trousse de secours minimale.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal">
+      <p>© 2025 AMOUBE NDE LOUANGE-MYSTERE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <div class="modal-backdrop" id="quoteModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <header>
+        <h3>Demander un devis</h3>
+        <button class="close" data-close>&times;</button>
+      </header>
+      <div class="grid">
+        <div>
+          <label>Destination</label>
+          <input type="text" id="q-destination" value="" />
+        </div>
+        <div>
+          <label>Type</label>
+          <select id="q-type">
+            <option value="volhotel">Vol + Hôtel</option>
+            <option value="hotel">Hôtel seul</option>
+          </select>
+        </div>
+        <div>
+          <label>Personnes</label>
+          <input type="number" id="q-personnes" min="1" value="2" />
+        </div>
+        <div>
+          <label>Nuities</label>
+          <input type="number" id="q-nuits" min="1" value="5" />
+        </div>
+        <div>
+          <label>Saison</label>
+          <select id="q-saison">
+            <option value="basse">Basse</option>
+            <option value="normale" selected>Normale</option>
+            <option value="haute">Haute</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <span id="q-resultat" class="badge" aria-live="polite"></span>
+        <button class="btn btn-cta" id="q-calculer">Calculer</button>
+        <button class="btn" data-close>Fermer</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

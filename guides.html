@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guides & Conseils - Travelia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container row">
+      <a class="brand" href="index.html#top">Travelia</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+      <nav class="nav">
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#experiences">Expériences</a>
+        <a href="index.html#a-propos">À propos</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="guides.html">Guides</a>
+        <a href="destinations.html">Toutes les destinations</a>
+        <a href="login.html">Connexion</a>
+      </nav>
+      <a class="btn btn-primary" href="destinations.html">Explorer</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Guides et conseils</h1>
+      <p class="lead">Préparez votre voyage avec nos meilleurs articles: bagages, santé, sécurité, budget, photo, trekking, et plus.</p>
+      <p><a class="btn btn-primary" href="#" data-quote="">Demander un devis</a></p>
+
+      <div class="grid cards">
+        <article class="card reveal-up" style="--d:0s">
+          <a class="card-link" href="guides-valise.html">
+            <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?q=80&w=1200&auto=format&fit=crop" alt="Valise et bagages"/>
+            <div class="card-body">
+              <h3>Checklist valise: l'indispensable</h3>
+              <p>Les essentiels, le superflu, et comment gagner de la place.</p>
+            </div>
+          </a>
+        </article>
+        <article class="card reveal-up" style="--d:.05s">
+          <a class="card-link" href="guides-randonnee.html">
+            <img src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=1200&auto=format&fit=crop" alt="Randonnée"/>
+            <div class="card-body">
+              <h3>Débuter la randonnée en sécurité</h3>
+              <p>Équipement, météo, orientation, nutrition: nos conseils.</p>
+            </div>
+          </a>
+        </article>
+        <article class="card reveal-up" style="--d:.1s">
+          <a class="card-link" href="guides-photo.html">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop" alt="Photographie de voyage"/>
+            <div class="card-body">
+              <h3>Photographier ses voyages</h3>
+              <p>Composition, lumière, réglages et astuces pro.</p>
+            </div>
+          </a>
+        </article>
+        <article class="card reveal-up" style="--d:.15s">
+          <a class="card-link" href="guides-sante.html">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop" alt="Trousse de secours"/>
+            <div class="card-body">
+              <h3>Santé en voyage</h3>
+              <p>Trousse, vaccins, hygiène et bonnes pratiques.</p>
+            </div>
+          </a>
+        </article>
+        <article class="card reveal-up" style="--d:.2s">
+          <a class="card-link" href="guides-budget.html">
+            <img src="https://images.unsplash.com/photo-1502920514313-52581002a659?q=80&w=1200&auto=format&fit=crop" alt="Budget et devises"/>
+            <div class="card-body">
+              <h3>Budget & devises</h3>
+              <p>Gérer les paiements, les retraits et le change à l'étranger.</p>
+            </div>
+          </a>
+        </article>
+        <article class="card reveal-up" style="--d:.25s">
+          <a class="card-link" href="guides-securite.html">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1200&auto=format&fit=crop" alt="Sécurité"/>
+            <div class="card-body">
+              <h3>Sécurité: bons réflexes</h3>
+              <p>Documents, assurances, copies et sauvegardes.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">Travelia</div>
+        <p>Agence de voyage moderne et responsable. Itinéraires sur mesure et conseils d'experts.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#a-propos">Notre mission</a></li>
+          <li><a href="guides.html">Guides & conseils</a></li>
+          <li><a href="index.html#offres">Offres du moment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <ul>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="login.html">Mon compte</a></li>
+          <li><a href="#top">Haut de page</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form class="newsletter" onsubmit="event.preventDefault(); alert('Inscription enregistrée.');">
+          <input type="email" placeholder="Votre email" required>
+          <button class="btn btn-cta" type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </div>
+    <div class="container legal">
+      <p>© 2025 AMOUBE NDE LOUANGE-MYSTERE. All rights reserved.</p>
+      <div class="links"><a href="#">Confidentialité</a> · <a href="#">Conditions</a></div>
+      <div class="socials" aria-label="Réseaux sociaux">
+        <a href="https://instagram.com/travelia" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://facebook.com/travelia" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 10h3V7h-3V6a2 2 0 0 1 2-2h1V1h-2a5 5 0 0 0-5 5v1H7v3h2v10h4V10z" fill="currentColor"/></svg>
+        </a>
+        <a href="https://x.com/travelia" aria-label="X" title="X" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3l8.5 9.8L3.6 21H7l5.6-6.6L18 21h3l-8-9 7.4-9H17L11.8 8.2 7 3H3z" fill="currentColor"/></svg>
+        </a>
+        <a href="https://youtube.com/@travelia" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 8.2s-.2-1.6-.8-2.3c-.8-.8-1.7-.8-2.1-.9C16.7 4.7 12 4.7 12 4.7h0s-4.7 0-7.1.3c-.4 0-1.3.1-2.1.9C2.2 6.6 2 8.2 2 8.2S1.7 10.2 1.7 12v0c0 1.8.3 3.8.3 3.8s.2 1.6.8 2.3c.8.8 1.9.8 2.4.9 1.7.2 7 .3 7 .3s4.7 0 7.1-.3c.4 0 1.3-.1 2.1-.9.6-.7.8-2.3.8-2.3s.3-2 .3-3.8v0c0-1.8-.3-3.8-.3-3.8z" stroke="currentColor" stroke-width="1.2"/><path d="M10 9.75v4.5l4-2.25-4-2.25z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <!-- Modal Devis -->
+  <div class="modal-backdrop" id="quoteModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <header>
+        <h3>Demander un devis</h3>
+        <button class="close" data-close>&times;</button>
+      </header>
+      <div class="grid">
+        <div>
+          <label>Destination</label>
+          <input type="text" id="q-destination" value="" />
+        </div>
+        <div>
+          <label>Type</label>
+          <select id="q-type">
+            <option value="volhotel">Vol + Hôtel</option>
+            <option value="hotel">Hôtel seul</option>
+          </select>
+        </div>
+        <div>
+          <label>Personnes</label>
+          <input type="number" id="q-personnes" min="1" value="2" />
+        </div>
+        <div>
+          <label>Nuities</label>
+          <input type="number" id="q-nuits" min="1" value="5" />
+        </div>
+        <div>
+          <label>Saison</label>
+          <select id="q-saison">
+            <option value="basse">Basse</option>
+            <option value="normale" selected>Normale</option>
+            <option value="haute">Haute</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <span id="q-resultat" class="badge" aria-live="polite"></span>
+        <button class="btn btn-cta" id="q-calculer">Calculer</button>
+        <button class="btn" data-close>Fermer</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Budget & devises - Travelia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container row">
+      <a class="brand" href="index.html#top">Travelia</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+      <nav class="nav">
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#experiences">Expériences</a>
+        <a href="index.html#a-propos">À propos</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="guides.html">Guides</a>
+        <a href="destinations.html">Toutes les destinations</a>
+        <a href="login.html">Connexion</a>
+      </nav>
+      <a class="btn btn-primary" href="#" data-quote="">Demander un devis</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <article class="prose">
+        <h1>Budget & devises</h1>
+        <p class="lead">Bien gérer son argent en voyage: paiements, retraits, change et sécurité.</p>
+        <img src="https://images.unsplash.com/photo-1502920514313-52581002a659?q=80&w=1600&auto=format&fit=crop" alt="Budget et devises" style="width:100%;border-radius:12px;margin:16px 0;"/>
+        <h2>Avant de partir</h2>
+        <ul>
+          <li>Prévenez votre banque et vérifiez les plafonds</li>
+          <li>Comparez les frais de change/retrait à l'étranger</li>
+          <li>Préparez une carte de secours</li>
+        </ul>
+        <h2>Pendant le voyage</h2>
+        <p>Privilégiez les paiements en carte locale. Retirez des petites sommes. Changez dans des bureaux fiables.</p>
+        <h2>Sécurité</h2>
+        <p>Éparpillez vos moyens de paiement, utilisez un porte-carte RFID, gardez les reçus.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal">
+      <p>© 2025 AMOUBE NDE LOUANGE-MYSTERE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <div class="modal-backdrop" id="quoteModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <header>
+        <h3>Demander un devis</h3>
+        <button class="close" data-close>&times;</button>
+      </header>
+      <div class="grid">
+        <div>
+          <label>Destination</label>
+          <input type="text" id="q-destination" value="" />
+        </div>
+        <div>
+          <label>Type</label>
+          <select id="q-type">
+            <option value="volhotel">Vol + Hôtel</option>
+            <option value="hotel">Hôtel seul</option>
+          </select>
+        </div>
+        <div>
+          <label>Personnes</label>
+          <input type="number" id="q-personnes" min="1" value="2" />
+        </div>
+        <div>
+          <label>Nuities</label>
+          <input type="number" id="q-nuits" min="1" value="5" />
+        </div>
+        <div>
+          <label>Saison</label>
+          <select id="q-saison">
+            <option value="basse">Basse</option>
+            <option value="normale" selected>Normale</option>
+            <option value="haute">Haute</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <span id="q-resultat" class="badge" aria-live="polite"></span>
+        <button class="btn btn-cta" id="q-calculer">Calculer</button>
+        <button class="btn" data-close>Fermer</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
