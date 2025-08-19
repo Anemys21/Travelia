@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Honduras - Travelia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container row">
+      <a class="brand" href="index.html">Travelia</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+      <nav class="nav">
+        <a href="index.html#destinations">Destinations</a>
+        <a href="index.html#experiences">Expériences</a>
+        <a href="index.html#a-propos">À propos</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="guides.html">Guides</a>
+        <a href="destinations.html">Toutes les destinations</a>
+        <a href="login.html">Connexion</a>
+      </nav>
+      <a class="btn btn-primary" href="destinations.html">Retour</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Honduras</h1>
+      <p class="lead">Caraïbes honduriennes, île de Roatán, récifs coralliens et villages colorés entre mer et jungle.</p>
+      <div class="grid" style="margin:18px 0">
+        <ul class="bullets">
+          <li>Saison idéale: décembre à avril</li>
+          <li>Activités: plongée à Roatán, snorkeling, plages de West Bay, parc national Pico Bonito</li>
+          <li>Durée conseillée: 6 à 9 jours</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Plage des Caraïbes, Honduras">
+        <img src="https://images.unsplash.com/photo-1519567241046-7f570eee3bfb?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Récifs coralliens, Roatán">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Eau turquoise">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Cocotiers au bord de l'eau">
+      </div>
+      <div id="map" aria-label="Carte Honduras (Roatán)"></div>
+      <p style="margin-top:16px"><a class="btn btn-cta" href="#" data-quote="Honduras">Demander un devis</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal">
+      <p>© 2025 AMOUBE NDE LOUANGE-MYSTERE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    // Roatán (Honduras) approx coords
+    const map = L.map('map').setView([16.3000, -86.5500], 10);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map);
+    L.marker([16.3000, -86.5500]).addTo(map).bindPopup('Roatán, Honduras');
+  </script>
+  <!-- Modal Devis -->
+  <div class="modal-backdrop" id="quoteModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <header>
+        <h3>Demander un devis</h3>
+        <button class="close" data-close>&times;</button>
+      </header>
+      <div class="grid">
+        <div>
+          <label>Destination</label>
+          <input type="text" id="q-destination" value="Honduras" />
+        </div>
+        <div>
+          <label>Type</label>
+          <select id="q-type">
+            <option value="volhotel">Vol + Hôtel</option>
+            <option value="hotel">Hôtel seul</option>
+          </select>
+        </div>
+        <div>
+          <label>Personnes</label>
+          <input type="number" id="q-personnes" min="1" value="2" />
+        </div>
+        <div>
+          <label>Nuities</label>
+          <input type="number" id="q-nuits" min="1" value="6" />
+        </div>
+        <div>
+          <label>Saison</label>
+          <select id="q-saison">
+            <option value="basse">Basse</option>
+            <option value="normale" selected>Normale</option>
+            <option value="haute">Haute</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <span id="q-resultat" class="badge" aria-live="polite"></span>
+        <button class="btn btn-cta" id="q-calculer">Calculer</button>
+        <button class="btn" data-close>Fermer</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

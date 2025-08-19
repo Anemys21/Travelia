@@ -39,8 +39,8 @@ function parallaxInner(){
 parallaxInner();
 window.addEventListener('scroll', parallaxInner, { passive: true });
 
-// Reveal on scroll animations
-const revealEls = document.querySelectorAll('.reveal-up');
+// Reveal on scroll animations (also target cards)
+const revealEls = document.querySelectorAll('.reveal-up, .card');
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(entry => {
     if (entry.isIntersecting) {
