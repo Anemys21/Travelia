@@ -115,7 +115,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   const fmt = new Intl.NumberFormat('fr-FR');
 
   function baseRate(type){
-    return type === 'hotel' ? 45000 : 120000; // par personne / nuit
+    return type === 'hotel' ? 45000 : 120000; 
   }
   function destFactor(dest){
     const d = (dest||'').toLowerCase();
